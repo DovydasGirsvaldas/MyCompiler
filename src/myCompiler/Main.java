@@ -15,7 +15,6 @@ public class Main extends Application {
             Parent root= FXMLLoader.load(getClass().getResource("layout/EclipseMain.fxml"));
             Scene scene = new Scene(root);
             System.out.println("### comment for git");
-            System.out.println("### comment for git2");
            // scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.show();
