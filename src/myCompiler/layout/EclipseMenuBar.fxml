@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <MenuBar AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="menuFileExit" mnemonicParsing="false" text="Exit" />
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Source">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Navigate">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Search">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Project">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Run">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Window">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</fx:root>
