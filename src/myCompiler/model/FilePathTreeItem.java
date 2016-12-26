@@ -5,6 +5,10 @@ package myCompiler.model;
         import java.nio.file.Files;
         import java.nio.file.Path;
 
+        import javafx.event.Event;
+        import javafx.event.EventHandler;
+        import javafx.scene.control.ContextMenu;
+        import javafx.scene.control.MenuItem;
         import javafx.scene.control.TreeItem;
         import javafx.scene.image.Image;
         import javafx.scene.image.ImageView;
@@ -13,33 +17,28 @@ package myCompiler.model;
         import javax.imageio.ImageIO;
 
 public class FilePathTreeItem extends TreeItem<String> {
-    private static String IMAGE_PATH= ".."+ File.separator +"resources" + File.separator +"fileIcons" + File.separator ;
-
 
     // this stores the full path to the file or directory
-    private String fullPath;
+    private Path fullPath;
 
-    public String getFullPath() {
+    public Path getFullPath() {
         return (this.fullPath);
     }
 
-    private boolean isDirectory;
-
     public boolean isDirectory() {
-        return (this.isDirectory);
+        return Files.isDirectory(fullPath);
     }
 
     public FilePathTreeItem(Path filePath) {
         super();
-        this.fullPath = filePath.toString();
+        this.fullPath = filePath;
+
         String fileName = filePath.getFileName().toString();
         setValue(fileName);
         String imageLocation;
-        if (Files.isDirectory(filePath)) {
-            this.isDirectory = true;
+        if (Files.isDirectory(fullPath)) {
              imageLocation= FileIconHelper.getFolderImageLocation(filePath);
         } else {
-            this.isDirectory = false;
              imageLocation= FileIconHelper.getImageLocation(filePath);
         }
         try {
@@ -49,4 +48,8 @@ public class FilePathTreeItem extends TreeItem<String> {
         }
     }
 
+
+    public void delete() {
+        System.out.println("delete");
+    }
 }

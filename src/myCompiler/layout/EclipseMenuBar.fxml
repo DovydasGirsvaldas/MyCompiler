@@ -11,49 +11,16 @@
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem fx:id="menuFileExit" mnemonicParsing="false" text="Exit" />
+                        <Menu  mnemonicParsing="false" text="New">
+                            <MenuItem mnemonicParsing="false" text="Package" fx:id="newPackage"/>
+                        </Menu>
                         <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                         <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
+                <Menu mnemonicParsing="false" text="VCS">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Delete" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Source">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Navigate">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Search">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Project">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Run">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Window">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
                     </items>
                 </Menu>
             </menus>

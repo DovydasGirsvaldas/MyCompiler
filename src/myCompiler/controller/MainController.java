@@ -1,5 +1,6 @@
 package myCompiler.controller;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -11,14 +12,15 @@ import javafx.scene.layout.BorderPane;
 public class MainController implements Initializable, OpenFileInterface{
 
     private EclipseCodingPane eclipseCodingPane;
+    private EclipseFileTree eclipseFileTree;
 
     @FXML
     private BorderPane mainContainer;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        EclipseMenuBar eclipseMenuBar= new EclipseMenuBar();
-        EclipseFileTree eclipseFileTree= new EclipseFileTree(this);
+        EclipseMenuBar eclipseMenuBar= new EclipseMenuBar(this);
+        eclipseFileTree= new EclipseFileTree(this);
         eclipseCodingPane= new EclipseCodingPane();
         mainContainer.setTop(eclipseMenuBar);
         mainContainer.setLeft(eclipseFileTree);
@@ -31,9 +33,8 @@ public class MainController implements Initializable, OpenFileInterface{
         eclipseCodingPane.openTab(path);
     }
 
-
-    //			image1.setImage(new javafx.scene.image.Image(getClass().getResource("/resources/drawable/viva1.jpg").toExternalForm()));
-
-
+    public void addTreeItem(File file){
+        eclipseFileTree.addTreeItem(file);
+    }
 
 }

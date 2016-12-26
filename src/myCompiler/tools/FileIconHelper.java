@@ -20,6 +20,9 @@ public class FileIconHelper {
             case "fxml":
                 locationString=IMAGE_PATH+"fxml_file.png";
                 break;
+            case "xml":
+                locationString=IMAGE_PATH+"fxml_file.png";
+                break;
             case "png":
                 locationString= IMAGE_PATH+"image.png";
                 break;

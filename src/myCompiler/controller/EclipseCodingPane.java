@@ -5,6 +5,8 @@ import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -34,10 +36,19 @@ public class EclipseCodingPane extends AnchorPane  implements Initializable{
         Tab tab = new Tab();
         CodeTab pane = new CodeTab(path);
         tab.setContent(pane);
+        tab.setClosable(true);
         Label tabALabel = new Label(Paths.get(path).getFileName().toString());
         tab.setGraphic(tabALabel);
-
+        tab.setOnCloseRequest(new EventHandler<Event>()
+        {
+            @Override
+            public void handle(Event arg0)
+            {
+                pane.saveFileChanges();
+            }
+        });
         codingPane.getTabs().add(tab);
+        codingPane.getSelectionModel().select(tab);
         return tab;
     }
 
@@ -45,7 +56,7 @@ public class EclipseCodingPane extends AnchorPane  implements Initializable{
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        openTab("C:\\Users\\Dovydas\\workspace\\TestingFX\\src\\application\\Main.java");
+       // openTab("C:\\Users\\Dovydas\\workspace\\TestingFX\\src\\application\\Main.java");
     }
 
 }

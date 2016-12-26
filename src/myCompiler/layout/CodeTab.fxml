@@ -3,9 +3,9 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="371.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <TextArea fx:id="lineNumberArea" prefHeight="260.0" prefWidth="28.0" />
-        <TextArea fx:id="contentArea" layoutX="32.0" prefHeight="260.0" prefWidth="500.0"/>
+              <TextArea fx:id="lineNumberArea" prefHeight="282.0" prefWidth="30.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" style="overflow:hidden" wrapText="true"/>
+             <TextArea fx:id="contentArea" prefHeight="282.0" prefWidth="202.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0" />
     </children>
-</fx:root>
+ </fx:root>
